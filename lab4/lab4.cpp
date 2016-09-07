@@ -7,6 +7,7 @@ using namespace std;
 
 int main()
 {
+    cout << 32%7;
     string adj1 = "big"; 
     string adj2 = "red";
     string adj3 = "happy";
