@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+//got song from www.theteachersguide.com/kidsongs/ahuntingwewillgo.htm
+
 void song(){
     
     cout << "A hunting we will go, a hunting we will go" << endl;
