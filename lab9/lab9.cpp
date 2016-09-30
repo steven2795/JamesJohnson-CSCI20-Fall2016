@@ -21,7 +21,7 @@ class TemperatureConverter  {
       }
       
       double SetTempFromKelvin(double x){
-         kelvin_=x;
+         kelvin_ = x;
       }
       
       double GetTempFromKelvin(){
