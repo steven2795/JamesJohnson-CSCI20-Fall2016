@@ -70,10 +70,10 @@ int main(){
         y = 0;
         i++;
         }
-    }
+    }//end while
         
         
     
         
         
-}
+}//end main
