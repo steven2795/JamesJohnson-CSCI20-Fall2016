@@ -9,13 +9,13 @@ using namespace std;
 
 int main(){
    
-    float totalCost = 0.0; 
+    float totalCost = 0.0;  //all needed variables
     string food[100];
     int i = 0;
     float price[10];
     int inventory[10];
     
-    price[0] = 2.50;
+    price[0] = 2.50;        //keeps track of price for each item
     price[1] = 3.00;
     price[2] = 2.00;
     price[3] = 2.50;
@@ -26,9 +26,9 @@ int main(){
     price[8] = 6.00;
     price[9] = 2.00;
     
-    inventory[0] = 9;
+    inventory[0] = 9;       //keeps track of inventory of each item
     inventory[1] = 8;
-    inventory[2] = 6;
+    inventory[2] = 3;
     inventory[3] = 15;
     inventory[4] = 11;
     inventory[5] = 18;
@@ -38,7 +38,7 @@ int main(){
     inventory[9] = 12;
     
     string menu[10];
-    menu[0] = "Hamburger";
+    menu[0] = "Hamburger";    //keeps track of menu items
     menu[1] = "Cheeseburger";
     menu[2] = "Hot Dog";
     menu[3] = "Chili Dog";
@@ -51,9 +51,9 @@ int main(){
     
     string choice;
     
-    cout << "What would you like? Enter Done when finished." << endl;    
+    cout << "What would you like? Enter Done when finished." << endl;  //prompts user for input  
    
-    cout << "Number 1: " << menu[0] << endl;
+    cout << "Number 1: " << menu[0] << endl;  //reads out menu
     cout << "Number 2: " << menu[1] << endl;
     cout << "Number 3: " << menu[2] << endl;
     cout << "Number 4: " << menu[3] << endl;
@@ -68,139 +68,177 @@ int main(){
     
    
     
-    getline(cin,choice);
+    getline(cin,choice);                                //users input
     
-    if(choice == "Number 1"){
+    if(choice == "Number 1"){                             //finds out what user chose
        
-       if(inventory[0] > 0){
+       if(inventory[0] > 0){                              //checks if item's inventory has run out
+          
           cout << "You've chosen a Hamburger" << endl;
           food[i] = menu[0];
           totalCost += price[0];
           inventory[0] -= 1;
           cout << "That will be " << price[0] << "0$ and we now have " << inventory[0] << " Hamburgers left." << endl;
         }
+        
         else{
             cout << "Sorry we are out of those. Please choose something else." << endl;
+            i -= 1;
         }
     }
+  
     else if(choice == "Number 2"){
         
         if(inventory[1] > 0){
+         
           cout << "You've chosen a Cheeseburger" << endl;
           food[i] = menu[1];
           totalCost += price[1];
           inventory[1] -= 1;
           cout << "That will be " << price[1] << ".00$ and we now have " << inventory[1] << " Cheeseburgers left." << endl;
         }
+       
         else{
             cout << "Sorry we are out of those. Please choose something else." << endl;
+            i -= 1;
         }
+   
     }
     else if(choice == "Number 3"){
         
         if(inventory[2] > 0){
+        
           cout << "You've chosen a Hot Dog" << endl;
           food[i] = menu[2];
           totalCost += price[2];
           inventory[2] -= 1;
           cout << "That will be " << price[2] << ".00$ and we now have " << inventory[2] << " Hot Dogs left." << endl;
         }
+       
         else{
             cout << "Sorry we are out of those. Please choose something else." << endl;
+            i -= 1;
         }
     }
+ 
     else if(choice == "Number 4"){
         
         if(inventory[3] > 0){
+       
           cout << "You've chosen a Chili Dog" << endl;
           food[i] = menu[3];
           totalCost += price[3];
           inventory[3] -= 1;
           cout << "That will be " << price[3] << "0$ and we now have " << inventory[3] << " Chili Dogs left." << endl;
         }
+       
         else{
             cout << "Sorry we are out of those. Please choose something else." << endl;
+            i -= 1;
         }
     }
+  
     else if(choice == "Number 5"){
         
         if(inventory[4] > 0){
+        
           cout << "You've chosen a Burrito" << endl;
           food[i] = menu[4];
           totalCost += price[4];
           inventory[4] -= 1;
           cout << "That will be " << price[4] << ".00$ and we now have " << inventory[4] << " Burritos left." << endl;
         }
+      
         else{
             cout << "Sorry we are out of those. Please choose something else." << endl;
+            i -= 1;
         }
     }
+  
     else if(choice == "Number 6"){
         
         if(inventory[5] > 0){
+       
           cout << "You've chosen a Quesadilla" << endl;
           food[i] = menu[5];
           totalCost += price[5];
           inventory[5] -= 1;
           cout << "That will be " << price[5] << "0$ and we now have " << inventory[5] << " Quesadillas left." << endl;
         }
+      
         else{
             cout << "Sorry we are out of those. Please choose something else." << endl;
+            i -= 1;
         }
     }
+  
     else if(choice == "Number 7"){
         
         if(inventory[6] > 0){
+        
           cout << "You've chosen a Taco" << endl;
           food[i] = menu[6];
           totalCost += price[6];
           inventory[6] -= 1;
           cout << "That will be " << price[6] << ".00$ and we now have " << inventory[6] << " Tacos left." << endl;
         }
+      
         else{
             cout << "Sorry we are out of those. Please choose something else." << endl;
+            i -= 1;
         }
     }
+ 
     else if(choice == "Number 8"){
         
         if(inventory[7] > 0){
+        
           cout << "You've chosen a Tamale" << endl;
           food[i] = menu[7];
           totalCost += price[7];
           inventory[7] -= 1;
           cout << "That will be " << price[7] << "0$ and we now have " << inventory[7] << " Tamales left." << endl;
         }
+       
         else{
             cout << "Sorry we are out of those. Please choose something else." << endl;
+            i -= 1;
         }
     }
     else if(choice == "Number 9"){
         
         if(inventory[8] > 0){
+        
           cout << "You've chosen a Ice Cream" << endl;
           food[i] = menu[8];
           totalCost += price[8];
           inventory[8] -= 1;
           cout << "That will be " << price[8] << ".00$ and we now have " << inventory[8] << " Ice Creams left." << endl;
         }
+       
         else{
             cout << "Sorry we are out of those. Please choose something else." << endl;
+            i -= 1;
         }
     }
     else if(choice == "Number 10"){
         
         if(inventory[9] > 0){
+       
           cout << "You've chosen a Donut" << endl;
           food[i] = menu[9];
           totalCost += price[9];
           inventory[9] -= 1;
           cout << "That will be " << price[9] << ".00$ and we now have " << inventory[9] << " Donuts left." << endl;
         }
+      
         else{
             cout << "Sorry we are out of those. Please choose something else." << endl;
+            i -= 1;
         }
     }
-    else if(choice != "Done"){
+  
+    else if(choice != "Done"){               //double checks user input for valid input
         cout << "Try again." << endl;
         i = i -1;
     }
@@ -210,12 +248,12 @@ int main(){
     
     cout << "Your order is: " << endl;
     
-   for(int c = 0; c <= i; c++){
+   for(int c = 0; c <= i; c++){  //reads off each item chosen
        
        cout << food[c] << endl;
        
-   }
+   }//end for loop
       
-       cout << "Which comes out to " << totalCost << "$." << endl;     
+       cout << "Which comes out to " << totalCost << "$." << endl;     //reads out total cost
             
 }//end main
