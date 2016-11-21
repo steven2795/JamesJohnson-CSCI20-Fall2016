@@ -5,16 +5,69 @@
 
 #include<iostream>
 #include<fstream>
+#include<sstream>
 using namespace std;
+
+
+class student{
+  private:
+  
+    int j_;
+  
+  public:
+    
+    student(){
+        j_ = 0;
+    }
+    student(int x){
+        j_ = x;
+    }
+    
+};
+
+
 
 
 int main(){
     
+    ifstream fin1;             //creates file objects
+    ofstream fout1;
     
-    ifstream fin;
-    ofstream fout;
+    ifstream fin2;
+    ofstream fout2;
     
-    int average;
+    fin1.open("answerkey.txt");
+    fout1.open("outputAnswerKey.txt");
+    
+    fin2.open("studentanswers.txt");
+    fout2.open("outputStudentAnswers.txt");
+    
+    string answerKey[21];
+    string studentAnswers[21][6]];
+    
+    
+    for(int i = 0; i < 21; i++){
+        fin1 >> answerKey[i];
+    }
+    int i = 0;
+    while(!fin2.eof())
+   {
+      fin2 >> studentAnswers[i];
+      i++;
+   }
+    
+    for(int i = 0; i < 21; i ++){
+        cout << answerKey[i] << endl;
+    }
+    
+    for(int i = 0; i < 150; i ++){
+        cout << studentAnswers[i] << endl;
+    }
+    
+    
+    
+    
+    /*int average;                                   //all needed variables
     
     double christianGrade = 0;
     double paxtonGrade = 0;
@@ -39,10 +92,10 @@ int main(){
     string carrieWord[3];
     string answersWord[3];
     
-    fin.open("read.txt");
+    fin.open("read.txt");                 //opens files
     fout.open("output.txt");
     
-    answersMult[0] = 'a';       paxtonMult[0] = 'd';
+    answersMult[0] = 'a';       paxtonMult[0] = 'd';          //seeds the answers 
     answersMult[1] = 'b';       paxtonMult[1] = 'a';
     answersMult[2] = 'c';       paxtonMult[2] = 'd';
     answersMult[3] = 'c';       paxtonMult[3] = 'c';
@@ -136,7 +189,7 @@ int main(){
     
     
     for(int i = 0; i < 18; i++){
-        if(answersMult[i] == christianMult[i]){
+        if(answersMult[i] == christianMult[i]){            //finds out what is right and wrong
             christianGrade = christianGrade + 1;
         }
         else if(christianMult[i] == '?'){
@@ -293,9 +346,9 @@ int main(){
     }
     
     
-    average = (christianGrade + paxtonGrade + abbyGrade + audreyGrade + katieGrade + carrieGrade)/6; 
+    average = (christianGrade + paxtonGrade + abbyGrade + audreyGrade + katieGrade + carrieGrade)/6;    //averages out test scores
     
-    cout << "Christian Smith: " << christianGrade << endl;
+    cout << "Christian Smith: " << christianGrade << endl;             //reads out results
     cout << "Paxton Jones: " << paxtonGrade << endl;
     cout << "Abby Sciuto: " << abbyGrade << endl;
     cout << "Audrey Smithson: " << audreyGrade << endl;
@@ -304,15 +357,15 @@ int main(){
     cout << "Class average: " << average << endl;
     
     fout << "Christian Smith: " << christianGrade << endl;
-    fout << "Paxton Jones: " << paxtonGrade << endl;
+    fout << "Paxton Jones: " << paxtonGrade << endl;                //puts output in the files
     fout << "Abby Sciuto: " << abbyGrade << endl;
     fout << "Audrey Smithson: " << audreyGrade << endl;
     fout << "Katie Holmes: " << katieGrade << endl;
     fout << "Carrie Grant: " << carrieGrade << endl;
     fout << "Class average: " << average << endl;
  
-    fin.close();
+    fin.close();                 //closes files
     fout.close();
-    return 0;
+    return 0;*/
     
 }
